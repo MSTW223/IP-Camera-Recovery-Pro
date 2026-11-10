@@ -1,0 +1,32 @@
+
+name: Create Android Signing Key
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  create-key:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate signing key
+        run: |
+          keytool -genkeypair \
+            -v \
+            -keystore release-key.jks \
+            -alias ip-camera-recovery \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -storepass "${{ secrets.KEYSTORE_PASSWORD }}" \
+            -keypass "${{ secrets.KEY_PASSWORD }}" \
+            -dname "CN=IP Camera Recovery Pro, OU=Mobile, O=IP Camera Recovery, L=Bursa, ST=Bursa, C=TR"
+
+      - name: Upload signing key
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-signing-key
+          path: release-key.jks
+          retention-days: 1

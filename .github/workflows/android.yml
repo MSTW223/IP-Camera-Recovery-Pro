@@ -33,6 +33,10 @@ jobs:
           gradle-version: '8.9'
 
       - name: Decode signing key
+            - name: Check signing key fingerprint
+        run: |
+          echo "SHA256 fingerprint of GitHub signing key:"
+          sha256sum release-key.jks
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
         run: |

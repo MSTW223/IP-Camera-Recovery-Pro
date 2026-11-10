@@ -10,8 +10,12 @@ permissions:
 jobs:
   create-key:
     runs-on: ubuntu-latest
+
     steps:
       - name: Generate signing key
+        env:
+          STORE_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASS: ${{ secrets.KEY_PASSWORD }}
         run: |
           keytool -genkeypair \
             -v \
@@ -20,9 +24,14 @@ jobs:
             -keyalg RSA \
             -keysize 2048 \
             -validity 10000 \
-            -storepass "${{ secrets.KEYSTORE_PASSWORD }}" \
-            -keypass "${{ secrets.KEY_PASSWORD }}" \
+            -storepass "$STORE_PASS" \
+            -keypass "$KEY_PASS" \
             -dname "CN=IP Camera Recovery Pro, OU=Mobile, O=IP Camera Recovery, L=Bursa, ST=Bursa, C=TR"
+
+          keytool -list \
+            -keystore release-key.jks \
+            -storepass "$STORE_PASS" \
+            -alias ip-camera-recovery
 
       - name: Upload signing key
         uses: actions/upload-artifact@v4

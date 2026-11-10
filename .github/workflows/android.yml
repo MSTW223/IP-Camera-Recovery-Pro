@@ -39,6 +39,26 @@ jobs:
           echo "$KEYSTORE_BASE64" | base64 --decode > release-key.jks
           test -s release-key.jks
 
+      - name: Verify signing credentials
+        env:
+          STORE_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASS: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          echo "Checking keystore password..."
+          keytool -list \
+            -keystore release-key.jks \
+            -storepass "$STORE_PASS" \
+            -alias ip-camera-recovery
+
+          echo "Checking private key password..."
+          keytool -certreq \
+            -alias ip-camera-recovery \
+            -keystore release-key.jks \
+            -storepass "$STORE_PASS" \
+            -keypass "$KEY_PASS" \
+            -file /tmp/signing-check.csr
+
+          echo "Signing credentials verified."
       - name: Build Release APK
         run: gradle assembleRelease
 

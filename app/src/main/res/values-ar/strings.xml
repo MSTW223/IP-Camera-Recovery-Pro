@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IP Camera Recovery Pro</string>
+    <string name="app_subtitle">مساعد التشخيص واستعادة كاميرات المراقبة للمحترفين</string>
+    
+    <!-- Navigation Tabs -->
+    <string name="nav_discovery">الكشف</string>
+    <string name="nav_details">التفاصيل</string>
+    <string name="nav_diagnostics">التشخيص</string>
+    <string name="nav_recovery">الاستعادة الرسمية</string>
+    <string name="nav_tools">أدوات CCTV</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <!-- Discovery Screen -->
+    <string name="discovery_title">كشف كاميرات الشبكة</string>
+    <string name="discovery_subtitle">فحص الشبكة المحلية لأجهزة داهوا (Dahua) وهايكفيجن (Hikvision) وONVIF</string>
+    <string name="btn_start_scan">بدء فحص الشبكة</string>
+    <string name="btn_stop_scan">إيقاف الفحص</string>
+    <string name="filter_all">جميع الكاميرات</string>
+    <string name="filter_hikvision">هايكفيجن (SADP)</string>
+    <string name="filter_dahua">داهوا (DHIP)</string>
+    <string name="filter_onvif">معيار ONVIF العام</string>
+    <string name="search_hint">ابحث بواسطة IP أو MAC أو الموديل أو الرقم التسلسلي...</string>
+    <string name="status_scanning">جاري إرسال حزم الاستكشاف عبر المنافذ 37020 و 37810 و ONVIF...</string>
+    <string name="status_idle">جاهز للفحص. اضغط زر البدء أعلاه.</string>
+    <string name="devices_found">تم اكتشاف %1$d كاميرا</string>
+
+    <!-- Device Details -->
+    <string name="device_details_title">بيانات ومواصفات الكاميرا</string>
+    <string name="lbl_ip">عنوان IP</string>
+    <string name="lbl_mac">عنوان الماك (MAC)</string>
+    <string name="lbl_vendor">الشركة المصنعة</string>
+    <string name="lbl_model">موديل الكاميرا</string>
+    <string name="lbl_serial">الرقم التسلسلي (S/N)</string>
+    <string name="lbl_firmware">إصدار السوفتوير (Firmware)</string>
+    <string name="lbl_protocol">بروتوكول الاستكشاف</string>
+    <string name="lbl_ports">المنافذ الأساسية</string>
+    <string name="lbl_rtsp_stream">رابط بث RTSP المباشر</string>
+    <string name="lbl_snapshot_url">رابط التقاط الصورة (Snapshot)</string>
+    <string name="btn_ping_test">فحص سرعة الاتصال (Ping)</string>
+    <string name="btn_port_audit">فحص المنافذ المفتوحة</string>
+    <string name="btn_open_web">فتح لوحة تحكم الويب</string>
+    <string name="btn_view_recovery">عرض دليل الاستعادة الرسمي</string>
+
+    <!-- Network Diagnostics -->
+    <string name="diagnostics_title">تشخيص الشبكة والاتصال</string>
+    <string name="ping_tester_title">فحص استجابة Ping وقياس التردد</string>
+    <string name="port_scanner_title">تدقيق منافذ كاميرات المراقبة</string>
+    <string name="subnet_calc_title">حاسبة الشبكة الفرعية وفحص تعارض IP</string>
+    <string name="btn_run_diagnostics">بدء فحص الشبكة</string>
+    <string name="lbl_target_ip">عنوان IP الهدف</string>
+    <string name="lbl_packet_loss">فقدان الحزم</string>
+    <string name="lbl_latency">متوسط زمن الاستجابة</string>
+    <string name="lbl_jitter">الاضطراب (Jitter)</string>
+
+    <!-- Official Recovery -->
+    <string name="recovery_title">إجراءات الاستعادة المعتمدة</string>
+    <string name="recovery_subtitle">بروتوكولات إعادة ضبط كلمة المرور المعتمدة من الشركات المصنعة</string>
+    <string name="recovery_ethics_warning">تنبيه الامتثال الأخلاقي والقانوني: يتبع هذا المساعد بدقة الإجراءات الرسمية المصرح بها من الشركات المصنعة. لا يُجري التطبيق أي هجمات تخمين (Brute Force) أو اختراق أمني أو تجاوز غير مصرح به. يجب على الفني امتلاك إذن رسمي وإثبات ملكية للجهاز.</string>
+    <string name="tab_hikvision_recovery">بروتوكولات هايكفيجن</string>
+    <string name="tab_dahua_recovery">بروتوكولات داهوا</string>
+    <string name="tab_hardware_reset">أزرار إعادة الضبط الفيزيائية</string>
+
+    <!-- Tools -->
+    <string name="tools_title">أدوات مهندس كاميرات المراقبة</string>
+    <string name="calc_storage_title">حاسبة الباندويث والتخزين</string>
+    <string name="calc_lens_title">حاسبة البعد البؤري للعدسة وزوايا DORI</string>
+    <string name="lbl_codec">ترميز الضغط</string>
+    <string name="lbl_resolution">الدقة</string>
+    <string name="lbl_days">أيام التسجيل المطلوبة</string>
+    <string name="lbl_storage_needed">سعة التخزين المطلوبة</string>
+    <string name="lbl_dori_detect">مسافة الكشف (Detection)</string>
+    <string name="lbl_dori_identify">مسافة التعرف الدقيق (Identify)</string>
+
+    <!-- Permissions -->
+    <string name="permission_rationale">يتطلب نظام أندرويد إذن الوصول للواي فاي والموقع الجغرافي للتمكن من فحص واستكشاف الكاميرات على الشبكة المحلية.</string>
+    <string name="btn_grant_permission">منح أذونات الشبكة</string>
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IP Camera Recovery Pro</string>
+    <string name="app_subtitle">CCTV Diagnostic &amp; Recovery Assistant</string>
+    
+    <!-- Navigation Tabs -->
+    <string name="nav_discovery">Discovery</string>
+    <string name="nav_details">Details</string>
+    <string name="nav_diagnostics">Diagnostics</string>
+    <string name="nav_recovery">Recovery</string>
+    <string name="nav_tools">Tools</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Discovery Screen -->
+    <string name="discovery_title">Network Camera Discovery</string>
+    <string name="discovery_subtitle">Scan local network for Dahua, Hikvision &amp; ONVIF devices</string>
+    <string name="btn_start_scan">Start Discovery Scan</string>
+    <string name="btn_stop_scan">Stop Scan</string>
+    <string name="filter_all">All Devices</string>
+    <string name="filter_hikvision">Hikvision (SADP)</string>
+    <string name="filter_dahua">Dahua (DHIP)</string>
+    <string name="filter_onvif">ONVIF / Generic</string>
+    <string name="search_hint">Search by IP, MAC, Model, or Serial...</string>
+    <string name="status_scanning">Probing UDP 37020 / 37810 and ONVIF WS-Discovery...</string>
+    <string name="status_idle">Ready to scan. Tap start button above.</string>
+    <string name="devices_found">%1$d Cameras Discovered</string>
+
+    <!-- Device Details -->
+    <string name="device_details_title">Device Specification</string>
+    <string name="lbl_ip">IP Address</string>
+    <string name="lbl_mac">MAC Address</string>
+    <string name="lbl_vendor">Manufacturer</string>
+    <string name="lbl_model">Device Model</string>
+    <string name="lbl_serial">Serial Number</string>
+    <string name="lbl_firmware">Firmware Version</string>
+    <string name="lbl_protocol">Discovery Protocol</string>
+    <string name="lbl_ports">Standard Ports</string>
+    <string name="lbl_rtsp_stream">RTSP Main Stream URL</string>
+    <string name="lbl_snapshot_url">Snapshot URL</string>
+    <string name="btn_ping_test">Run Ping Diagnostics</string>
+    <string name="btn_port_audit">Audit Open Ports</string>
+    <string name="btn_open_web">Open Web Management</string>
+    <string name="btn_view_recovery">View Official Recovery Guide</string>
+
+    <!-- Network Diagnostics -->
+    <string name="diagnostics_title">Network Diagnostics</string>
+    <string name="ping_tester_title">ICMP &amp; Socket Ping Tester</string>
+    <string name="port_scanner_title">CCTV Port Auditor</string>
+    <string name="subnet_calc_title">Subnet &amp; IP Conflict Auditor</string>
+    <string name="btn_run_diagnostics">Execute Network Test</string>
+    <string name="lbl_target_ip">Target IP Address</string>
+    <string name="lbl_packet_loss">Packet Loss</string>
+    <string name="lbl_latency">Avg Latency</string>
+    <string name="lbl_jitter">Jitter</string>
+
+    <!-- Official Recovery -->
+    <string name="recovery_title">Official Recovery Procedures</string>
+    <string name="recovery_subtitle">Manufacturer-Supported Password Reset Protocols</string>
+    <string name="recovery_ethics_warning">STRICT COMPLIANCE NOTICE: This assistant strictly follows authorized manufacturer reset procedures. It NEVER attempts brute-force attacks, security exploits, or unauthorized password bypasses. Technicians must possess physical ownership proof or authorized work orders.</string>
+    <string name="tab_hikvision_recovery">Hikvision Protocols</string>
+    <string name="tab_dahua_recovery">Dahua Protocols</string>
+    <string name="tab_hardware_reset">Hardware Reset Buttons</string>
+
+    <!-- Tools -->
+    <string name="tools_title">CCTV Engineering Field Tools</string>
+    <string name="calc_storage_title">Bandwidth &amp; Storage Calculator</string>
+    <string name="calc_lens_title">Lens Focal Length &amp; DORI Calculator</string>
+    <string name="lbl_codec">Compression Codec</string>
+    <string name="lbl_resolution">Resolution</string>
+    <string name="lbl_days">Retention Days</string>
+    <string name="lbl_storage_needed">Required HDD Storage</string>
+    <string name="lbl_dori_detect">Detection Distance</string>
+    <string name="lbl_dori_identify">Identification Distance</string>
+
+    <!-- Permissions -->
+    <string name="permission_rationale">Wi-Fi and Location permissions are required by Android OS to discover IP cameras on the local Wi-Fi subnet.</string>
+    <string name="btn_grant_permission">Grant Network Permissions</string>
+</resources>
